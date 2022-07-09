@@ -9,8 +9,6 @@ def enter_digit(text):
             dig_float = dig[:dig.find('.')] + dig[dig.find('.')+1:]
             if dig_float.isdigit():
                 break
-            else:
-                print('Введенный символ не число! Повторите ввод.')    
         if dig.isdigit():
            break
         else:
