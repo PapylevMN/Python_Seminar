@@ -1,11 +1,8 @@
 from my_library import enter_digit
-result = []
+result = {}
 number = int(enter_digit('Введите число : '))
 if number < 0:
     number *= -1
 for i in range(1, number+1):
-    element = 1
-    for j in range (1, i+1):
-        element *= j
-    result.append(element)
-print(*result)
+    result[i] = round((1+1/i)**i,3)
+print(result)
