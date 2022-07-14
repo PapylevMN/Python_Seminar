@@ -7,7 +7,7 @@ def my_random():
     a =348
     c = 21
     m = 7877
-    seed = str(time.time())[-2:]
+    seed = str(time.time())[-3:]
     result = (a*int(seed) + c) % m
     if result > 255:
         result = result-(255*(result//255))

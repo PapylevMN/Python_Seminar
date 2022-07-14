@@ -1,4 +1,4 @@
-from digit_cheker import enter_digit
+from my_library import enter_digit
 
 print('Введите координаты точки А:')
 x,y = enter_digit('X - > '), enter_digit('Y - > ')
