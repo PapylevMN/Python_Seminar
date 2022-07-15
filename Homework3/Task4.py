@@ -19,28 +19,31 @@ def binary_convert_to_negative(bin_number):
             digit = 0
     return bin_number
 
+def convert_to_binary(dec_number):
+    bin_number = []
+    while dec_number > 1:
+        bin_number.append(dec_number % 2)
+        dec_number = dec_number//2
+
+    bin_number.append(dec_number)
+
+    for _ in range(24-len(bin_number)):
+        bin_number.append(0)
+    
+    bin_number = bin_number[::-1]
+
+    return bin_number
+
 num = int(enter_digit('Введите число: '))
 flag_negative = 1
 if num < 0:
     flag_negative = -1
     num *= flag_negative
 
-result = []
-
-while num > 1:
-     result.append(num%2)
-     num = num//2
-
-result.append(num)
-
-for _ in range(24-len(result)):
-    result.append(0)
-
-result = result[::-1]
+result = convert_to_binary(num)
 
 if flag_negative == -1:
-    result = binary_convert_to_negative(result)
-    print(*result, sep = '')
+    print(*binary_convert_to_negative(result), sep = '')
 else:
     print(*result, sep = '')
 
