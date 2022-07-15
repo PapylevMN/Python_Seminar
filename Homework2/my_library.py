@@ -1,4 +1,5 @@
-def enter_digit(text):
+
+def enter_digit(text:str): 
     while True:
         flag_negative_digit = 1
         number = input(text)

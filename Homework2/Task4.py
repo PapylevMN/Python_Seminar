@@ -24,6 +24,7 @@ for i in range(h):
             g = random.randint(0, 256)
             b = random.randint(0, 256)
         else:
+            # time.sleep(0.0001)
             r = my_random()
             g = my_random()
             b = my_random()
