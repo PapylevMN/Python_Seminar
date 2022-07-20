@@ -7,7 +7,7 @@ if length_array<0:
     length_array *=-1
     print('Введено отрицательное число. Данные взяты по модулю')
 for _ in range(length_array):
-    array.append(round(random.uniform(1.0, 20.0 ), 3))
+    array.append(random.uniform(1.0, 20.0 ))
 print(*array)
-array = [round((n-int(n)),3) for n in array]
+array = [(n-int(n)) for n in array]
 print(f'Разница между {max(array)} и {min(array)} = {max(array) - min(array)}')
