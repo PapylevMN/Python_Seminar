@@ -1,6 +1,6 @@
+def pattern_delete(text,sample):
+    return ' '.join(filter(lambda word: sample not in word, text))
+
 s = [w.lower() for w in input('Введите тект : ').split()]
 sample  = input('Введите шаблон для удаления :').lower()
-for i in range(len(s)-1, -1, -1):
-    if s[i].find(sample) != -1:
-        del s[i]
-print(' '.join(s))
+print(pattern_delete(s, sample))

@@ -1,3 +1,16 @@
+import random
+def random_array():
+    array = []
+    length_array = int(enter_digit('Введите размер массива: '))
+    low = int(enter_digit('Введите нижнюю границу массива: '))
+    high = int(enter_digit('Введите верхнюю границу массива: '))
+    if length_array < 0:
+        length_array *= -1
+        print('Введено отрицательное число. Данные взяты по модулю')
+    for _ in range(length_array):
+        array.append(random.randint(low, high))
+    return array
+
 def enter_digit(text:str):
     '''
     Проверяет ввод пользователя на число

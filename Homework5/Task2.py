@@ -9,7 +9,7 @@ def player_move(name, num, bot):
         num -=q
         print(f'{name} взял {q} конфет')
     else:
-        pl1 = int(ml.enter_candy(f'{name}, cколько конфет возьмете? :'))
+        pl1 = ml.enter_candy(f'{name}, cколько конфет возьмете? :')
         num -= pl1
     return num
 
@@ -42,4 +42,4 @@ while run:
     bot = True if mode == '1' else False
     game(n, bot)
     end = input('Хотите сыграть еще? Y/N? ')
-    run = True if end.lower() == 'y' else False
+    run = True if end.lower() == 'y' or end.lower() == 'д' else False

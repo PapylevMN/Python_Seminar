@@ -24,3 +24,9 @@ my_tup = create_tuples(lan, num)
 print(my_tup)
 res = filtr(my_tup)
 print(res)
+
+def filter_list(tuples_list): 
+    filtered = filter(lambda lang_list: reduce(lambda a,b: a+b, [ord(char) for char in lang_list[1]]) % lang_list[0]==0, tuples_list)
+    result_list = list(map(lambda elem: (reduce(lambda a,b: a+b, [ord(char) for char in elem[1]]), elem[1]), filtered)) 
+    result = sum([num for num, _ in result_list]) 
+    return result_list, result
