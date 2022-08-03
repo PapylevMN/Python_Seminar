@@ -1,23 +1,20 @@
 import interface
-import to_do_hw
+import search as s
 import new_task_enter as nt
+import convert
 
 def run():
     run = True
     while run:
         option = interface.start()
-        if option == '7':
+        if option == '5':
             return
         elif option == '2':
-            pass
+            s.search()
         elif option == '3':
-            pass
+            s.print_all()
         elif option == '4':
-            pass
-        elif option == '5':
-            pass
-        elif option == '6':
-            pass
+            convert.to_csv()
         elif option == '1':
             nt.enter_task()
         
