@@ -152,8 +152,7 @@ async def load_new_task_name(message:types.Message, state: FSMContext):
     
 @dp.callback_query_handler(text = 'candy')
 async def candy_game(callback: types.CallbackQuery, state: FSMContext):
-    bank = 140
-    await callback.message.answer(f'Давайте поиграем! На столе {bank} конфет. Возьмите не более 28 шт.', reply_markup=cancel_kb)
+    await callback.message.answer(f'Давайте поиграем! На столе 140 конфет. Возьмите не более 28 шт.', reply_markup=cancel_kb)
     await TaskStatesGroup.candy.set()
     await callback.answer()
 
